@@ -1,0 +1,9 @@
+<div class='mt-4'>
+  <span><%= link_to shout.user.username, user_path(shout.user) %></span>
+  <span><%= shout.body %></span>
+  <span>
+    <%= link_to shout_path(shout) do %>
+      <%= time_ago_in_words(shout.created_at) %> ago
+    <% end %>
+  </span>
+</div>

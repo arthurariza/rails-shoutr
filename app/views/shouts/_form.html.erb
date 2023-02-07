@@ -1,0 +1,13 @@
+<% if shout.errors.any? %>
+  <ul style="color: red">
+    <% shout.errors.each do |error| %>
+      <li><%= error.full_message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for shout do |f| %>
+  <%= f.text_field :body %>
+
+  <%= f.submit %>
+<% end %>
