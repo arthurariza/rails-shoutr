@@ -7,7 +7,10 @@
 <% end %>
 
 <%= form_for shout do |f| %>
-  <%= f.text_field :body %>
+  <%= f.fields_for :content do |c| %>
+    <%= c.hidden_field :content_type, value: "TextShout" %>
+    <%= c.text_field :body, required: true %>
+  <% end %>
 
   <%= f.submit %>
 <% end %>
