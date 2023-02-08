@@ -1,4 +1,5 @@
 class ShoutsController < ApplicationController
+  before_action :authenticate_user!, only: [:create]
   def index
     @shout = Shout.new
     @shouts = Shout.order(created_at: :desc)
