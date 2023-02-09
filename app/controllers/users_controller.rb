@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def show
-    @shouts = User.find(params[:id]).shouts
+    @user = User.find(params[:id])
+    @shouts = @user.shouts
   end
 end

@@ -1,4 +1,6 @@
 <div class='mt-4'>
+  <%= user_avatar_thumb(shout.user) %>
+
   <%= link_to shout.user.username, user_path(shout.user) %>
   <%= render shout.content, content: shout.content %>
 
