@@ -30,4 +30,8 @@ class User < ApplicationRecord
   def guest?
     false
   end
+
+  def to_param
+    username
+  end
 end
