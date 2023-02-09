@@ -26,4 +26,8 @@ class User < ApplicationRecord
   def dislike(shout)
     liked_shouts.destroy(shout)
   end
+
+  def guest?
+    false
+  end
 end

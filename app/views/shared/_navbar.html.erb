@@ -1,6 +1,6 @@
 <header class='container my-4'>
   <nav>
-    <% if user_signed_in? %>
+    <% if user_signed_in? && !current_user.guest? %>
       <%= link_to current_user.username, edit_user_registration_path %>
       <%= button_to "Log out", destroy_user_session_path, form_class: 'd-inline', method: :delete, class: 'inline-block btn btn-primary' %>
     <% else %>
