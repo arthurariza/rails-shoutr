@@ -12,5 +12,14 @@
     <%= c.text_field :body, required: true %>
   <% end %>
 
-  <%= f.submit %>
+  <%= f.submit 'Text Shout' %>
+<% end %>
+
+<%= form_for shout do |f| %>
+  <%= f.fields_for :content do |c| %>
+    <%= c.hidden_field :content_type, value: "PhotoShout" %>
+    <%= c.file_field :photo %>
+  <% end %>
+
+  <%= f.submit 'Photo Shout' %>
 <% end %>
