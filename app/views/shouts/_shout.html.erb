@@ -8,4 +8,5 @@
     <%= time_ago_in_words(shout.created_at) %> ago
   <% end %>
 
+  <%= like_button(current_user, shout) %>
 </div>
