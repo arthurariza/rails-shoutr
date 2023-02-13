@@ -5,7 +5,7 @@ RSpec.feature 'Shouts', type: :feature do
     visit '/'
 
     fill_in 'shout_content_body', with: 'Test Shout'
-    click_button 'Create Shout'
+    click_button 'Text Shout'
 
     expect(page).to have_text('You need to sign in or sign up before continuing.')
   end
@@ -18,7 +18,7 @@ RSpec.feature 'Shouts', type: :feature do
     visit '/'
 
     fill_in 'shout_content_body', with: 'Test Shout'
-    click_button 'Create Shout'
+    click_button 'Text Shout'
 
     expect(page).to have_text('Shout Created!')
   end
@@ -30,7 +30,7 @@ RSpec.feature 'Shouts', type: :feature do
 
     visit '/'
 
-    click_button 'Create Shout'
+    click_button 'Text Shout'
 
     expect(page).to have_text('Content is invalid')
   end
